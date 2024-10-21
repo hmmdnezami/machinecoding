@@ -7,12 +7,25 @@ import org.example.FoodOrderingSystem.Helpers.ServiceFactory;
 import org.example.FoodOrderingSystem.Interface.IOrderingService;
 import org.example.FoodOrderingSystem.Interface.IRestaurantService;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class main {
     public static void main(String[] args) {
         IRestaurantService restaurantService = ServiceFactory.getRestaurantServiceForUser();
+
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy-hh:mm:ss");
+//        LocalDateTime date = LocalDateTime.parse("24/11/1999-10:50:33", formatter);
+//        System.out.println(date);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss");
+        LocalDateTime date = LocalDateTime.parse("24/11/2999-10:50:33", formatter);
+        System.out.println(date);
+        boolean fl = LocalDateTime.now().isBefore(date);
+        System.out.println(fl);
 
         List<MenuItem> menu1 = new ArrayList<>();
         menu1.add(new MenuItem("FarmHouse1", 300));
