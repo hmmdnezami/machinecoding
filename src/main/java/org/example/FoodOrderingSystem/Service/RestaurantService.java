@@ -3,7 +3,7 @@ package org.example.FoodOrderingSystem.Service;
 
 import org.example.FoodOrderingSystem.Entity.MenuItem;
 import org.example.FoodOrderingSystem.Entity.Restaurant;
-import org.example.FoodOrderingSystem.Exceptions.NotFountException;
+import org.example.FoodOrderingSystem.Exceptions.notFountException;
 import org.example.FoodOrderingSystem.Helpers.Logger;
 import org.example.FoodOrderingSystem.Interface.IRestaurantService;
 
@@ -34,7 +34,7 @@ public class RestaurantService implements IRestaurantService {
     public void updateMenuItem(String restaurantName, MenuItem item) {
         try {
             if (!nameToRestaurant.containsKey(restaurantName)) {
-                throw  new NotFountException("Restaurant by Name : {} doesn't exist!%n");
+                throw  new notFountException("Restaurant by Name : {} doesn't exist!%n");
 //                System.out.printf("Restaurant by Name : %s doesn't exist!%n", restaurantName);
 //                return;
             }

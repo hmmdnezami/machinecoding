@@ -1,8 +1,8 @@
 package org.example.FoodOrderingSystem.Exceptions;
 
-public class NotFountException extends Exception{
+public class notFountException extends Exception{
 
-    public NotFountException(String mes) {
+    public notFountException(String mes) {
         super(mes);
         System.out.println(mes);
     }
